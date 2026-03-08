@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>View Items • Lost &amp; Found Hub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <header>
+    <div class="nav-bar">
+      <div class="logo">Lost &amp; Found</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="report-lost.html">Report Lost</a>
+        <a href="report-found.html">Report Found</a>
+        <a href="view-items.html" class="active">View Items</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <button id="dark-mode-toggle" class="small-btn" type="button">Dark / Light</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <h1>View all items</h1>
+      <p>Here you can see every item that was reported as lost or found. Use the filters to narrow it down.</p>
+
+      <section class="card">
+        <div class="filters">
+          <button id="filter-all" type="button" class="filter-btn active">All</button>
+          <button id="filter-lost" type="button" class="filter-btn">Lost</button>
+          <button id="filter-found" type="button" class="filter-btn">Found</button>
+
+          <select id="filter-category">
+            <option value="">All categories</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Clothing">Clothing</option>
+            <option value="Documents">Documents / ID</option>
+            <option value="Accessories">Accessories</option>
+            <option value="Other">Other</option>
+          </select>
+
+          <input id="search-input" type="search" placeholder="Search text" />
+        </div>
+
+        <div id="items-grid" class="items-grid" aria-live="polite"></div>
+      </section>
+    </section>
+  </main>
+
+  <!-- Item details modal -->
+  <div id="item-modal-backdrop" class="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-item-title">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 id="modal-item-title">Item title</h2>
+        <button id="modal-close-btn" type="button" class="small-btn">Close</button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-image">
+          <img id="modal-item-image" alt="Item image" />
+        </div>
+        <div class="modal-body-text">
+          <p><strong>Type:</strong> <span id="modal-type"></span></p>
+          <p><strong>Category:</strong> <span id="modal-category"></span></p>
+          <p><strong>Description:</strong> <span id="modal-description"></span></p>
+          <p><strong>Location:</strong> <span id="modal-location"></span></p>
+          <p><strong>Date:</strong> <span id="modal-date"></span></p>
+          <p><strong>Contact:</strong> <span id="modal-contact"></span></p>
+        </div>
+      </div>
+      <button id="btn-claim-item" type="button" class="btn" style="margin-top: 10px;">
+        Mark as claimed
+      </button>
+    </div>
+  </div>
+
+  <footer>
+    Simple Lost &amp; Found demo – data is kept only in this browser.
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>
+

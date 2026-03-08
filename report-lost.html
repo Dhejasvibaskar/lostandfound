@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Report Lost Item • Lost &amp; Found Hub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <header>
+    <div class="nav-bar">
+      <div class="logo">Lost &amp; Found</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="report-lost.html" class="active">Report Lost</a>
+        <a href="report-found.html">Report Found</a>
+        <a href="view-items.html">View Items</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <button id="dark-mode-toggle" class="small-btn" type="button">Dark / Light</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <h1>Report a lost item</h1>
+      <p>Fill in this form when you have lost something. Fields marked with * are required.</p>
+
+      <section class="card">
+        <form id="lost-form" novalidate>
+          <div class="form-row">
+            <label for="lost-item-name">Item name *</label>
+            <input type="text" id="lost-item-name" placeholder="Example: Black backpack" />
+            <div id="lost-item-name-error" class="error"></div>
+          </div>
+
+          <div class="form-row">
+            <label for="lost-category">Category *</label>
+            <select id="lost-category">
+              <option value="">Choose an option</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Clothing">Clothing</option>
+              <option value="Documents">Documents / ID</option>
+              <option value="Accessories">Accessories</option>
+              <option value="Other">Other</option>
+            </select>
+            <div id="lost-category-error" class="error"></div>
+          </div>
+
+          <div class="form-row">
+            <label for="lost-date">Date lost *</label>
+            <input type="date" id="lost-date" />
+            <div id="lost-date-error" class="error"></div>
+          </div>
+
+          <div class="form-row">
+            <label for="lost-location">Where did you lose it? *</label>
+            <input type="text" id="lost-location" placeholder="Example: Library second floor" />
+            <div id="lost-location-error" class="error"></div>
+          </div>
+
+          <div class="form-row">
+            <label for="lost-description">Short description *</label>
+            <textarea id="lost-description"
+              placeholder="Color, brand, special marks, anything that helps recognize it."></textarea>
+            <div id="lost-description-error" class="error"></div>
+          </div>
+
+          <div class="form-row">
+            <label for="lost-contact-name">Your name *</label>
+            <input type="text" id="lost-contact-name" />
+            <div id="lost-contact-name-error" class="error"></div>
+          </div>
+
+          <div class="form-row">
+            <label for="lost-contact-email">Contact email *</label>
+            <input type="email" id="lost-contact-email" placeholder="name@example.com" />
+            <div id="lost-contact-email-error" class="error"></div>
+          </div>
+
+          <div class="form-row">
+            <label for="lost-image">Optional photo</label>
+            <input type="file" id="lost-image" accept="image/*" />
+            <p class="hint">You can add a small photo if you want.</p>
+            <div id="lost-image-preview" class="image-preview">
+              <img id="lost-image-preview-img" alt="Preview of uploaded image" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <button type="submit" class="btn">Save lost item</button>
+            <a href="view-items.html" class="btn secondary">View items</a>
+          </div>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    Simple Lost &amp; Found demo – data is kept only in this browser.
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>
+
