@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 
@@ -106,3 +107,113 @@
 
 </html>
 
+=======
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Report Found Item • Lost &amp; Found Hub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <header>
+    <div class="nav-bar">
+      <div class="logo">Lost &amp; Found</div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="report-lost.html">Report Lost</a>
+        <a href="report-found.html" class="active">Report Found</a>
+        <a href="view-items.html">View Items</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav-right">
+        <button id="dark-mode-toggle" class="small-btn" type="button">Dark / Light</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <h1>Report a found item</h1>
+      <p>Use this form when you have found something that someone else might be looking for.</p>
+
+      <section class="card">
+        <form id="found-form" novalidate>
+          <div class="form-row">
+            <label for="found-item-name">Item name *</label>
+            <input type="text" id="found-item-name" placeholder="Example: Wallet with blue stripe" />
+            <div id="found-item-name-error" class="error"></div>
+          </div>
+
+          <div class="form-row">
+            <label for="found-category">Category *</label>
+            <select id="found-category">
+              <option value="">Choose an option</option>
+              <option value="Electronics">Electronics</option>
+              <option value="Clothing">Clothing</option>
+              <option value="Documents">Documents / ID</option>
+              <option value="Accessories">Accessories</option>
+              <option value="Other">Other</option>
+            </select>
+            <div id="found-category-error" class="error"></div>
+          </div>
+
+          <div class="form-row">
+            <label for="found-date">Date found *</label>
+            <input type="date" id="found-date" />
+            <div id="found-date-error" class="error"></div>
+          </div>
+
+          <div class="form-row">
+            <label for="found-location">Where did you find it? *</label>
+            <input type="text" id="found-location" placeholder="Example: Cafeteria, near entrance" />
+            <div id="found-location-error" class="error"></div>
+          </div>
+
+          <div class="form-row">
+            <label for="found-description">Short description *</label>
+            <textarea id="found-description"
+              placeholder="Brand, color, any notes or special marks."></textarea>
+            <div id="found-description-error" class="error"></div>
+          </div>
+
+          <div class="form-row">
+            <label for="found-contact-info">How can someone claim it? *</label>
+            <input type="text" id="found-contact-info"
+              placeholder="Example: Email me at name@example.com" />
+            <div id="found-contact-info-error" class="error"></div>
+          </div>
+
+          <div class="form-row">
+            <label for="found-image">Optional photo</label>
+            <input type="file" id="found-image" accept="image/*" />
+            <p class="hint">A small photo can help, but is not required.</p>
+            <div id="found-image-preview" class="image-preview">
+              <img id="found-image-preview-img" alt="Preview of uploaded image" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <button type="submit" class="btn">Save found item</button>
+            <a href="view-items.html" class="btn secondary">View items</a>
+          </div>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    Simple Lost &amp; Found demo – data is kept only in this browser.
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>
+
+>>>>>>> c0632a6b171dd4a7ca0bb0ec6d9503fdba7eaba0
